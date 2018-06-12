@@ -7,9 +7,11 @@ pipeline {
   stages{
      stage('Build KPApi'){
 	steps{
+          sh '''
            echo "----------------Building KPApi---------------------"
            mvn clean install -Dmaven.test.skip=true
 	   echo "---------------KPApi Build is Success--------------"
+	  '''
 	  }
        }
    }
